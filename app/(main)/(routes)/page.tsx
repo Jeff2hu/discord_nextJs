@@ -2,7 +2,7 @@ import { ModeToggle } from "@/components/modeToggle";
 import { UserButton } from "@clerk/nextjs";
 
 export default function Home() {
-  console.log('abc');
+  console.log('abcd');
   return (
     <div>
       <UserButton afterSignOutUrl="/" />
