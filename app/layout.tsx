@@ -1,4 +1,5 @@
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { ModalProvider } from "@/components/providers/modal-provider";
 import { cn } from "@/lib/utils";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Open_Sans } from "next/font/google";
@@ -26,6 +27,7 @@ export default function RootLayout({
             storageKey="discord-theme"
           >
             {children}
+            <ModalProvider />
           </ThemeProvider>
         </body>
       </html>
