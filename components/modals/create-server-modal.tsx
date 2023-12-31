@@ -103,27 +103,28 @@ export const CreateServerModal = () => {
                   )}
                 />
               </div>
+
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field, formState }) => (
+                  <FormItem className="px-6">
+                    <FormLabel className="uppercase text-xs font-bold text-zinc-500 dark:text-secondary/70">
+                      Server Name
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        disabled={isLoading}
+                        className="bg-zinc-300/50 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
+                        placeholder="Enter server name"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
             </div>
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field, formState }) => (
-                <FormItem className="px-6">
-                  <FormLabel className="uppercase text-xs font-bold text-zinc-500 dark:text-secondary/70">
-                    Server Name
-                  </FormLabel>
-                  <FormControl>
-                    <Input
-                      disabled={isLoading}
-                      className="bg-zinc-300/50 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
-                      placeholder="Enter server name"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
             <DialogFooter className="bg-gray-100 px-6 py-4">
               <Button disabled={isLoading} variant="primary">
                 Create
